@@ -3,3 +3,39 @@
 .global-transition {
   @include transition();
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.fontweight500 {
+  @include setFontWeight(500);
+}
+
+.fontweight600 {
+  @include setFontWeight(600);
+}
+
+.fontweight700 {
+  @include setFontWeight(700);
+}
+
+.fontweight900 {
+  @include setFontWeight(900);
+}
