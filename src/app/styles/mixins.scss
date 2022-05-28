@@ -1,0 +1,133 @@
+// breakpoints
+$break-360: 360px;
+$break-xxs: 420px;
+$break-xs: 568px;
+$break-bootstrap-sm: 576px;
+$break-small: 768px;
+$break-mid: 992px;
+$break-lg: 1200px;
+$break1300: 1300px;
+$break1350: 1350px;
+$break-big: 1400px;
+$break1450: 1450px;
+$break1600: 1600px;
+$break1800: 1800px;
+
+// Mixins
+
+@mixin px360 {
+    @media(min-width: $break-360) {
+        @content;
+    }
+}
+@mixin xxs {
+    @media(min-width: $break-xxs) {
+        @content;
+    }
+}
+@mixin bootstrapSm {
+    @media(min-width: $break-bootstrap-sm) {
+        @content;
+    }
+}
+@mixin xs {
+    @media(min-width: $break-xs) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media(min-width: $break-small) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media(min-width: $break-mid) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media(min-width: $break-lg) {
+        @content;
+    }
+}
+
+@mixin big {
+    @media(min-width: $break-big) {
+        @content;
+    }
+}
+
+@mixin px1300 {
+    @media(min-width: $break1300) {
+        @content;
+    }
+}
+
+@mixin px1350 {
+    @media(min-width: $break1350) {
+        @content;
+    }
+}
+
+@mixin px1600 {
+    @media(min-width: $break1600) {
+        @content;
+    }
+}
+
+@mixin px1450 {
+    @media(min-width: $break1450) {
+        @content;
+    }
+}
+
+@mixin px1800 {
+    @media(min-width: $break1800) {
+        @content;
+    }
+}
+
+@mixin transition($property: all, $duration: .3s, $timing-function: ease-out, $delay: 0s) {
+    transition: $property $duration $timing-function $delay;
+}
+
+@mixin calculateFontSize($fontSize) {
+    font-size: $fontSize;
+
+    @media screen and (max-width: 767px) {
+        font-size: .8 * $fontSize;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.25) {
+        font-size: .9 * $fontSize;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1599px) {
+        font-size: .9 * $fontSize;
+    }
+}
+
+@mixin calculatePadding($paddingTop, $paddingRight, $paddingBottom, $paddingLeft) {
+    padding: $paddingTop $paddingRight $paddingBottom $paddingLeft;
+
+    @media screen and (max-width: 767px) {
+        padding: $paddingTop * .7 $paddingRight * .7 $paddingBottom * .7 $paddingLeft * .7;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1400px) {
+        padding: $paddingTop * .8 $paddingRight * .8 $paddingBottom * .8 $paddingLeft * .8;
+    }
+}
+
+@mixin pixelRatio125 {
+    @media (-webkit-device-pixel-ratio: 1.25) {
+        @content;
+    }
+
+    @media (-moz-device-pixel-ratio: 1.25) {
+        @content;
+    }
+}

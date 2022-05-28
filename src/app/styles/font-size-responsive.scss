@@ -1,0 +1,65 @@
+@import 'mixins';
+
+.fontsize9 {
+  @include calculateFontSize(9px);
+}
+
+.fontsize10 {
+    @include calculateFontSize(10px);
+}
+
+.fontsize11 {
+  @include calculateFontSize(11px);
+}
+
+.fontsize12 {
+  @include calculateFontSize(12px);
+}
+
+.fontsize13 {
+    @include calculateFontSize(13px);
+}
+
+.fontsize14 {
+    @include calculateFontSize(14px);
+}
+
+.fontsize15 {
+    @include calculateFontSize(15px);
+}
+
+.fontsize16 {
+    @include calculateFontSize(16px);
+}
+
+.fontsize18 {
+    @include calculateFontSize(18px);
+}
+
+.fontsize20 {
+  @include calculateFontSize(20px);
+}
+
+.fontsize22 {
+    @include calculateFontSize(22px);
+}
+
+.fontsize24 {
+  @include calculateFontSize(24px);
+}
+
+.fontsize25 {
+  @include calculateFontSize(25px);
+}
+
+.fontsize26 {
+    @include calculateFontSize(26px);
+}
+
+.fontsize28 {
+  @include calculateFontSize(28px);
+}
+
+.fontsize30 {
+    @include calculateFontSize(30px);
+}
