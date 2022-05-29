@@ -1,1 +1,9 @@
-<p>user-reviews works!</p>
+
+<div class="reviews-container">
+  <h3 class="fontsize30 mb-0 title-text d-flex justify-content-center fontweight700">
+    Co mają do powiedzenia nasi użytkownicy?
+  </h3>
+  <div class="d-flex">
+    <app-single-review-card *ngFor="let review of userReviews"></app-single-review-card>
+  </div>
+</div>

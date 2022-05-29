@@ -1,10 +1,17 @@
 // breakpoints
 $break-small: 768px;
+$break-lg: 1200px;
 
 // Mixins
 
 @mixin small {
     @media(min-width: $break-small) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media(min-width: $break-lg) {
         @content;
     }
 }

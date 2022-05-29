@@ -1,4 +1,6 @@
+
 @import 'colors';
+@import 'mixins';
 
 .title-container {
   color: white;
@@ -13,6 +15,11 @@
 
   .promotion-image {
     flex: 1;
+    margin-top: 100px;
+
+    @include large {
+      margin-top: 0;
+    }
   }
 
   .promotion-text {
@@ -22,11 +29,10 @@
 
   .decoration-circle {
     background: $orange-dark;
-    width: 50%;
-    height: auto;
-    padding-top: 50%;
-    left: -300px;
-    top: 60px;
+    width: 600px;
+    height: 600px;
+    left: -360px;
+    top: 100px;
   }
 
   .btn-container {
