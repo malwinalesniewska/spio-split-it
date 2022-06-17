@@ -12,13 +12,16 @@ export class TitleSectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  downloadMyFile(){
-    const link = document.createElement('a');
-    link.setAttribute('target', '_blank');
-    link.setAttribute('href', 'https://we.tl/t-lAFbIKJgcV');
-    link.setAttribute('download', `split-it.apk`);
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
+  downloadFile(url: string, filename: string): void {
+    fetch(url)
+      .then(response => response.blob())
+      .then(blob => {
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = filename;
+        link.click();
+        link.remove();
+    })
+    .catch(console.error);
   }
 }
