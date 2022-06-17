@@ -11,17 +11,4 @@ export class TitleSectionComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  downloadFile(url: string, filename: string): void {
-    fetch(url)
-      .then(response => response.blob())
-      .then(blob => {
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = filename;
-        link.click();
-        link.remove();
-    })
-    .catch(console.error);
-  }
 }
