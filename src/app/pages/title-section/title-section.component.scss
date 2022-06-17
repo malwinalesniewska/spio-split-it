@@ -36,6 +36,11 @@
   .promotion-text {
     flex: 1;
     z-index: 1;
+    margin-top: 20px;
+
+    @include medium {
+      margin-top: 0;
+    }
   }
 
   .decoration-circle {
