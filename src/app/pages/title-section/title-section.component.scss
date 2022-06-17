@@ -4,7 +4,6 @@
 
 .title-container {
   color: white;
-  margin-bottom: 50px;
 
   .logo {
     width: 100px;
@@ -15,7 +14,7 @@
 
   .promotion-image {
     flex: 1;
-    margin-top: 100px;
+    margin-top: 50px;
 
     @include large {
       margin-top: 0;
@@ -41,4 +40,8 @@
     border-radius: 10px;
     align-self: center;
   }
+}
+
+.button-anchor {
+  text-decoration: none;
 }
